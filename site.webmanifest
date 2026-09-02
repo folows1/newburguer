@@ -1,0 +1,14 @@
+{
+  "name": "New Burguer Lanches",
+  "short_name": "New Burguer",
+  "description": "Cardápio do New Burguer Lanches, Pouso Alegre, MG.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#08265C",
+  "theme_color": "#08265C",
+  "icons": [
+    { "src": "img/icone-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "img/icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

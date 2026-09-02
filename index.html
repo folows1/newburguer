@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>New Burguer Lanches — Cardápio e preços em Pouso Alegre, MG</title>
+<meta name="description" content="Cardápio e preços do New Burguer Lanches, o trailer azul de Pouso Alegre desde 2006. Hambúrguer de 120 gramas e uma Maionese D'Casa grátis em todo lanche. Retirada no local, na Av. Cel. Joaquim Roberto Duarte, 510, ao lado da PRF. (35) 3421-9493.">
+<link rel="canonical" href="https://newburguerlanches.com.br/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="New Burguer Lanches">
+<meta property="og:title" content="New Burguer Lanches — Cardápio, Pouso Alegre MG">
+<meta property="og:description" content="Hambúrguer de 120 gramas e uma Maionese D'Casa grátis em todo lanche. Mais de 30 opções. Retirada no local, ao lado da PRF. (35) 3421-9493.">
+<meta property="og:url" content="https://newburguerlanches.com.br/">
+<meta property="og:image" content="https://newburguerlanches.com.br/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="New Burguer Lanches, desde 2006, em Pouso Alegre, MG. Maionese da casa grátis e hambúrguer de 120 gramas.">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#08265C">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="placa">
+    <p class="placa-desde">Desde 2006</p>
+    <h1 class="placa-nome">New<br>Burguer<span class="placa-lanches">Lanches</span></h1>
+    <p class="placa-apelido">O trailer azul de Pouso Alegre, MG</p>
+  </div>
+  <ul class="selos">
+    <li>1 Maionese D'Casa <b>grátis</b> em todo lanche</li>
+    <li>Hambúrguer de <b>120 gramas</b></li>
+  </ul>
+  <p class="situacao" id="situacao" hidden></p>
+</header>
+
+<div class="barra">
+  <label class="busca">
+    <span class="sr-only">Buscar no cardápio</span>
+    <input type="search" id="busca" placeholder="Buscar lanche ou ingrediente" autocomplete="off">
+  </label>
+  <div class="filtros" id="filtros">
+    <button type="button" class="chip is-on" data-filtro="tudo">Tudo</button>
+    <button type="button" class="chip" data-filtro="hamburguer">Hambúrguer</button>
+    <button type="button" class="chip" data-filtro="frango">Frango</button>
+    <button type="button" class="chip" data-filtro="bacon">Bacon</button>
+    <button type="button" class="chip" data-filtro="sem-carne">Sem carne</button>
+  </div>
+</div>
+
+<main>
+
+<p class="vazio" id="vazio" hidden>Nada encontrado. Tente outro ingrediente.</p>
+
+<section class="secao" id="secao-lanches">
+  <h2 class="secao-titulo">Lanches</h2>
+  <div class="nota-maionese">
+    <picture>
+      <source srcset="img/maionese-dcasa.webp" type="image/webp">
+      <img src="img/maionese-dcasa.png" width="320" height="266" loading="lazy" decoding="async"
+           alt="Logo da Maionese D'Casa, a temperadinha do Brasil.">
+    </picture>
+    <p>Todo lanche vem com hambúrguer de 120 gramas e uma <b>Maionese D'Casa grátis</b>.</p>
+  </div>
+
+  <ul class="lista">
+    <li class="item" data-tags="sem-carne"><span class="nome">Misto</span><span class="ing">presunto e muçarela</span><span class="preco">16,00</span></li>
+    <li class="item" data-tags="sem-carne"><span class="nome">X Bauru</span><span class="ing">tomate, presunto e muçarela</span><span class="preco">17,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Burguer</span><span class="ing">tomate, hambúrguer e muçarela</span><span class="preco">19,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Salada</span><span class="ing">tomate, alface, hambúrguer e muçarela</span><span class="preco">20,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Salada Comp.</span><span class="ing">tomate, alface, hambúrguer, milho, batata e muçarela</span><span class="preco">23,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Egg</span><span class="ing">tomate, hambúrguer, ovo e muçarela</span><span class="preco">22,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Egg Salada</span><span class="ing">tomate, alface, hambúrguer, ovo e muçarela</span><span class="preco">23,00</span></li>
+    <li class="item" data-tags="hamburguer bacon"><span class="nome">X Bacon</span><span class="ing">tomate, hambúrguer, bacon e muçarela</span><span class="preco">26,00</span></li>
+    <li class="item" data-tags="hamburguer bacon"><span class="nome">X Bacon Salada</span><span class="ing">tomate, alface, hambúrguer, bacon e muçarela</span><span class="preco">27,00</span></li>
+    <li class="item" data-tags="hamburguer bacon"><span class="nome">X Egg Bacon</span><span class="ing">tomate, hambúrguer, ovo, bacon e muçarela</span><span class="preco">28,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Especial</span><span class="ing">tomate, hambúrguer, batata, presunto e muçarela</span><span class="preco">27,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Sanduba</span><span class="ing">tomate, alface, hambúrguer, ovo, milho, batata, presunto e muçarela</span><span class="preco">31,00</span></li>
+    <li class="item" data-tags="hamburguer bacon"><span class="nome">X Crock</span><span class="ing">tomate, hambúrguer, bacon, batata e muçarela</span><span class="preco">27,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Esperto</span><span class="ing">tomate, hambúrguer, batata, presunto, catupiry e muçarela</span><span class="preco">32,00</span></li>
+    <li class="item" data-tags="sem-carne"><span class="nome">X Americano</span><span class="ing">tomate, alface, ovo, presunto e muçarela</span><span class="preco">22,00</span></li>
+    <li class="item" data-tags="sem-carne"><span class="nome">X Vegetariano</span><span class="ing">tomate, alface, milho, ovo, batata e muçarela</span><span class="preco">22,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Galinha</span><span class="ing">tomate, frango, batata e muçarela</span><span class="preco">26,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Gal. Salada</span><span class="ing">tomate, frango, batata, alface, milho e muçarela</span><span class="preco">28,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Galinha Egg</span><span class="ing">tomate, frango, batata, ovo e muçarela</span><span class="preco">28,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Gal. Especial</span><span class="ing">tomate, frango, batata, presunto e muçarela</span><span class="preco">30,00</span></li>
+    <li class="item" data-tags="frango bacon"><span class="nome">X Gal. Bacon</span><span class="ing">tomate, frango, batata, bacon e muçarela</span><span class="preco">30,00</span></li>
+    <li class="item" data-tags="frango hamburguer"><span class="nome">X Gal. Burguer</span><span class="ing">tomate, frango, batata, hambúrguer e muçarela</span><span class="preco">31,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Gal. Cheddar</span><span class="ing">tomate, frango, cheddar, batata e muçarela</span><span class="preco">31,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Catupiry</span><span class="ing">tomate, frango, batata, catupiry e muçarela</span><span class="preco">31,00</span></li>
+    <li class="item" data-tags="frango"><span class="nome">X Crock Rico</span><span class="ing">tomate, frango, presunto, batata, catupiry e muçarela</span><span class="preco">36,00</span></li>
+    <li class="item" data-tags="frango bacon"><span class="nome">X Califórnia</span><span class="ing">tomate, frango, ovo, bacon, batata e muçarela</span><span class="preco">33,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Calabresa</span><span class="ing">tomate, hambúrguer, calabresa e muçarela</span><span class="preco">26,00</span></li>
+    <li class="item" data-tags="hamburguer"><span class="nome">X Cal. Cheddar</span><span class="ing">tomate, hambúrguer, calabresa, cheddar e muçarela</span><span class="preco">31,00</span></li>
+    <li class="item destaque" data-tags="hamburguer bacon"><span class="nome">New Burguer</span><span class="ing">tomate, alface, bacon, hambúrguer, ovo, milho, batata, presunto e muçarela</span><span class="preco">35,00</span></li>
+    <li class="item destaque" data-tags="hamburguer frango bacon"><span class="nome">X Tudo</span><span class="ing">tomate, alface, frango, bacon, hambúrguer, ovo, milho, batata, presunto e muçarela</span><span class="preco">43,00</span></li>
+    <li class="item destaque" data-tags="hamburguer frango bacon"><span class="nome">Coreto</span><span class="ing">tomate, alface, frango, bacon, hambúrguer, ovo, milho, batata, presunto, catupiry e muçarela</span><span class="preco">47,00</span></li>
+  </ul>
+</section>
+
+<section class="secao" id="secao-bebidas">
+  <h2 class="secao-titulo">Bebidas</h2>
+  <ul class="lista">
+    <li class="item" data-tags="bebida"><span class="nome">Refrigerante lata</span><span class="ing">350 ml</span><span class="preco">6,00</span></li>
+    <li class="item" data-tags="bebida"><span class="nome">Refrigerante 600 ml</span><span class="ing">garrafa</span><span class="preco">10,00</span></li>
+    <li class="item" data-tags="bebida"><span class="nome">Refrigerante 1 litro</span><span class="ing">garrafa</span><span class="preco">12,00</span></li>
+    <li class="item" data-tags="bebida"><span class="nome">Suco</span><span class="ing">caixinha 200 ml</span><span class="preco">6,00</span></li>
+    <li class="item" data-tags="bebida"><span class="nome">Água</span><span class="ing">garrafa</span><span class="preco">3,00</span></li>
+    <li class="item" data-tags="bebida"><span class="nome">Cerveja latão</span><span class="ing">473 ml</span><span class="preco">10,00</span></li>
+  </ul>
+</section>
+
+<section class="secao" id="secao-adicionais">
+  <h2 class="secao-titulo">Adicionais</h2>
+  <ul class="lista">
+    <li class="item" data-tags="adicional"><span class="nome">Catupiry</span><span class="ing">em qualquer lanche</span><span class="preco">5,00</span></li>
+    <li class="item" data-tags="adicional"><span class="nome">Cheddar</span><span class="ing">em qualquer lanche</span><span class="preco">5,00</span></li>
+  </ul>
+</section>
+
+<section class="info">
+  <h2 class="secao-titulo">Onde e quando</h2>
+
+  <figure class="mapa">
+    <picture>
+      <source srcset="img/local-prf.webp" type="image/webp">
+      <img src="img/local-prf.jpg" width="844" height="664" loading="lazy" decoding="async"
+           alt="Av. Coronel Joaquim Roberto Duarte, 510, Nossa Senhora Aparecida. O trailer do New Burguer fica ao lado do prédio da Polícia Rodoviária Federal, em Pouso Alegre.">
+    </picture>
+  </figure>
+
+  <div class="info-bloco">
+    <h3>Endereço</h3>
+    <p>Av. Cel. Joaquim Roberto Duarte, 510<br>Nossa Senhora Aparecida — Pouso Alegre, MG<br>Ao lado da Polícia Rodoviária Federal.</p>
+    <div class="gmaps">
+      <iframe src="https://maps.google.com/maps?q=Av.%20Cel.%20Joaquim%20Roberto%20Duarte%2C%20510%2C%20Nossa%20Senhora%20Aparecida%2C%20Pouso%20Alegre%20-%20MG&z=17&output=embed"
+              title="Mapa do New Burguer Lanches na Av. Cel. Joaquim Roberto Duarte, 510"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Av.+Cel.+Joaquim+Roberto+Duarte%2C+510%2C+Nossa+Senhora+Aparecida%2C+Pouso+Alegre+-+MG" target="_blank" rel="noopener">Abrir no Google Maps</a></p>
+  </div>
+
+  <div class="info-bloco">
+    <h3>Horário</h3>
+    <dl class="horario">
+      <dt>Terça a quinta</dt><dd>18h30 às 23h</dd>
+      <dt>Sexta a domingo</dt><dd>18h30 às 00h30</dd>
+      <dt>Segunda</dt><dd>fechado</dd>
+    </dl>
+  </div>
+
+  <div class="info-bloco">
+    <h3>Pedidos</h3>
+    <p>Retirada no local ou consumo no trailer. Não fazemos entrega.</p>
+    <p class="tel-destaque"><a href="tel:+553534219493">(35) 3421-9493</a></p>
+    <p>Telefone fixo. Também atendemos no WhatsApp <a class="link" href="https://wa.me/5535999819093">(35) 99981-9093</a>.</p>
+  </div>
+
+  <div class="info-bloco">
+    <h3>Pagamento</h3>
+    <p>Pix, cartão de crédito e débito, dinheiro. Não aceitamos cheque.</p>
+  </div>
+
+  <div class="info-bloco">
+    <h3>Redes</h3>
+    <div class="redes">
+      <a class="rede" href="https://instagram.com/newburguerlanches" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.64 3.64 0 0 0-.88-1.35 3.64 3.64 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07Zm0 3.37a5.49 5.49 0 1 1 0 10.98 5.49 5.49 0 0 1 0-10.98Zm0 1.98a3.51 3.51 0 1 0 0 7.02 3.51 3.51 0 0 0 0-7.02Zm5.71-3.53a1.28 1.28 0 1 1 0 2.57 1.28 1.28 0 0 1 0-2.57Z"/></svg>
+        <span>@newburguerlanches</span>
+      </a>
+      <a class="rede" href="https://www.facebook.com/profile.php?id=100043691719281" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+        <span>New Burguer Lanches</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<p class="assinatura">Fazendo lanche em Pouso Alegre desde 2006.</p>
+
+</main>
+
+<div class="acoes">
+<a class="ligar" href="tel:+553534219493">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.57 3.5a1 1 0 0 1-.25 1l-2.2 2.3Z"/></svg>
+  <span>Ligar <b>3421-9493</b></span>
+</a>
+<a class="zap" href="https://wa.me/5535999819093?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20para%20retirada.">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.23-.74-.65-1.23-1.46-1.38-1.71-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  WhatsApp
+</a>
+</div>
+
+<!--
+  Dados estruturados. É o que faz o Google mostrar horário, telefone e endereço
+  direto na busca. Mantenha estes dados idênticos aos do Google Business Profile.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://newburguerlanches.com.br/#restaurante",
+  "name": "New Burguer Lanches",
+  "alternateName": "New Burguer",
+  "description": "Trailer de lanches em Pouso Alegre, MG, aberto desde 2006, ao lado da PRF. Todo lanche com hambúrguer de 120 gramas e uma Maionese D'Casa grátis.",
+  "url": "https://newburguerlanches.com.br/",
+  "image": "https://newburguerlanches.com.br/img/og.jpg",
+  "telephone": "+55-35-3421-9493",
+  "contactPoint": { "@type": "ContactPoint", "contactType": "reservations", "telephone": "+55-35-99981-9093" },
+  "foundingDate": "2006",
+  "servesCuisine": ["Hambúrguer", "Lanches"],
+  "priceRange": "R$",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Dinheiro, Pix, Cartão de crédito, Cartão de débito",
+  "acceptsReservations": "False",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Cel. Joaquim Roberto Duarte, 510",
+    "addressLocality": "Pouso Alegre",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://instagram.com/newburguerlanches",
+    "https://www.facebook.com/profile.php?id=100043691719281"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "18:30", "closes": "00:30" }
+  ],
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Cardápio New Burguer Lanches",
+    "inLanguage": "pt-BR",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Lanches",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Misto", "description": "Presunto e muçarela.", "offers": { "@type": "Offer", "price": "16.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Bauru", "description": "Tomate, presunto e muçarela.", "offers": { "@type": "Offer", "price": "17.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Burguer", "description": "Tomate, hambúrguer e muçarela.", "offers": { "@type": "Offer", "price": "19.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Salada", "description": "Tomate, alface, hambúrguer e muçarela.", "offers": { "@type": "Offer", "price": "20.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Salada Completo", "description": "Tomate, alface, hambúrguer, milho, batata e muçarela.", "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Egg", "description": "Tomate, hambúrguer, ovo e muçarela.", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Egg Salada", "description": "Tomate, alface, hambúrguer, ovo e muçarela.", "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Bacon", "description": "Tomate, hambúrguer, bacon e muçarela.", "offers": { "@type": "Offer", "price": "26.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Bacon Salada", "description": "Tomate, alface, hambúrguer, bacon e muçarela.", "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Egg Bacon", "description": "Tomate, hambúrguer, ovo, bacon e muçarela.", "offers": { "@type": "Offer", "price": "28.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Especial", "description": "Tomate, hambúrguer, batata, presunto e muçarela.", "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Sanduba", "description": "Tomate, alface, hambúrguer, ovo, milho, batata, presunto e muçarela.", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Crock", "description": "Tomate, hambúrguer, bacon, batata e muçarela.", "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Esperto", "description": "Tomate, hambúrguer, batata, presunto, catupiry e muçarela.", "offers": { "@type": "Offer", "price": "32.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Americano", "description": "Tomate, alface, ovo, presunto e muçarela.", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Vegetariano", "description": "Tomate, alface, milho, ovo, batata e muçarela.", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha", "description": "Tomate, frango, batata e muçarela.", "offers": { "@type": "Offer", "price": "26.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Salada", "description": "Tomate, frango, batata, alface, milho e muçarela.", "offers": { "@type": "Offer", "price": "28.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Egg", "description": "Tomate, frango, batata, ovo e muçarela.", "offers": { "@type": "Offer", "price": "28.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Especial", "description": "Tomate, frango, batata, presunto e muçarela.", "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Bacon", "description": "Tomate, frango, batata, bacon e muçarela.", "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Burguer", "description": "Tomate, frango, batata, hambúrguer e muçarela.", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Galinha Cheddar", "description": "Tomate, frango, cheddar, batata e muçarela.", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Catupiry", "description": "Tomate, frango, batata, catupiry e muçarela.", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Crock Rico", "description": "Tomate, frango, presunto, batata, catupiry e muçarela.", "offers": { "@type": "Offer", "price": "36.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Califórnia", "description": "Tomate, frango, ovo, bacon, batata e muçarela.", "offers": { "@type": "Offer", "price": "33.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Calabresa", "description": "Tomate, hambúrguer, calabresa e muçarela.", "offers": { "@type": "Offer", "price": "26.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Calabresa Cheddar", "description": "Tomate, hambúrguer, calabresa, cheddar e muçarela.", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "New Burguer", "description": "Tomate, alface, bacon, hambúrguer, ovo, milho, batata, presunto e muçarela.", "offers": { "@type": "Offer", "price": "35.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "X Tudo", "description": "Tomate, alface, frango, bacon, hambúrguer, ovo, milho, batata, presunto e muçarela.", "offers": { "@type": "Offer", "price": "43.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Coreto", "description": "Tomate, alface, frango, bacon, hambúrguer, ovo, milho, batata, presunto, catupiry e muçarela.", "offers": { "@type": "Offer", "price": "47.00", "priceCurrency": "BRL" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Bebidas",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Refrigerante lata 350 ml", "offers": { "@type": "Offer", "price": "6.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Refrigerante 600 ml", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Refrigerante 1 litro", "offers": { "@type": "Offer", "price": "12.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Suco de caixinha 200 ml", "offers": { "@type": "Offer", "price": "6.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Água", "offers": { "@type": "Offer", "price": "3.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Cerveja latão 473 ml", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "BRL" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Adicionais",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Catupiry", "offers": { "@type": "Offer", "price": "5.00", "priceCurrency": "BRL" } },
+          { "@type": "MenuItem", "name": "Cheddar", "offers": { "@type": "Offer", "price": "5.00", "priceCurrency": "BRL" } }
+        ]
+      }
+    ]
+  }
+}
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
